@@ -50,15 +50,15 @@
 GST_DEBUG_CATEGORY_EXTERN(_owrpayload_debug);
 #define GST_CAT_DEFAULT _owrpayload_debug
 
-#define DEFAULT_MTU 1200
+#define DEFAULT_MTU 1500
 #define DEFAULT_BITRATE 0
 #define DEFAULT_RTX_TIME 0    /* FIXME: what's a sane default here? */
 
 #define LIMITED_WIDTH 640
 #define LIMITED_HEIGHT 480
-#define LIMITED_FRAMERATE 30.0
+#define LIMITED_FRAMERATE 20.0
 
-#define TARGET_BITS_PER_PIXEL 0.1 /* 640x360 15fps @ 768kbps =~ 0.2bpp */
+#define TARGET_BITS_PER_PIXEL 0.05 /* 640x360 15fps @ 768kbps =~ 0.2bpp */
 
 #define OWR_PAYLOAD_GET_PRIVATE(obj)    (G_TYPE_INSTANCE_GET_PRIVATE((obj), OWR_TYPE_PAYLOAD, OwrPayloadPrivate))
 
