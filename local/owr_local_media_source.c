@@ -155,6 +155,7 @@ static void owr_local_media_source_class_init(OwrLocalMediaSourceClass *klass)
     g_object_class_install_property(gobject_class, PROP_VOLUME,
         g_param_spec_double("volume", "Volume",
             "Volume factor (only applicable to audio sources)",
+            0, 1, 2,
             G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 
     g_object_class_install_property(gobject_class, PROP_MUTE,
@@ -181,6 +182,7 @@ static void owr_local_media_source_init(OwrLocalMediaSource *source)
     priv->device_index = -1;
     priv->message_origin_bus_set = owr_message_origin_bus_set_new();
     priv->source_volume = NULL;
+    priv->volume = 2;
     priv->mute = FALSE;
 }
 
